@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Card</title>
+    <link rel="stylesheet" href="../../static/books/style.css">
+</head>
+<body>
+    <div class="container" style="display: flex; gap: 10px;">
+        {% for n in books %}
+        <div class="book-card">
+        <img src="https://bbclub.az/thumb.php?src=https://bbclub.az/assets/img/books/Satranj.jpg&h=500&w=350&zc=0" alt="Book Cover" class="book-cover">
+        <div class="book-content">
+            <h2 class="book-title">{{ n.name }}</h2>
+            <p class="book-author">{{ n.author_name }}</p>
+            <p class="book-price">{{ n.price }}</p>
+            <p class="book-created_at">{{ n.created_at }}</p>
+            <button class="buy-button">Buy</button>
+        </div>
+        </div>
+        {% endfor %}
+</div>
+</body>
+</html>
